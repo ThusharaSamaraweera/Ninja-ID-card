@@ -22,6 +22,15 @@ class NinjaCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            const Center(
+              child: CircleAvatar(
+                backgroundImage: AssetImage('assets/ninja-face.jpg'),
+                radius: 40.0,
+              ),
+            ),
+            const Divider(
+              height: 60.0,
+            ),
             const Text(
               'NAME',
               style: TextStyle(
@@ -29,7 +38,7 @@ class NinjaCard extends StatelessWidget {
                 letterSpacing: 2.0,
               ),
             ),
-            SizedBox(height: 10.0),
+            const SizedBox(height: 10.0),
             Text(
               'John',
               style: TextStyle(
@@ -39,7 +48,7 @@ class NinjaCard extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 30.0),
+            const SizedBox(height: 30.0),
             const Text(
               'CURRENT NINJA LEVEL',
               style: TextStyle(
@@ -47,7 +56,7 @@ class NinjaCard extends StatelessWidget {
                 letterSpacing: 2.0,
               ),
             ),
-            SizedBox(height: 10.0),
+            const SizedBox(height: 10.0),
             Text(
               '8',
               style: TextStyle(
@@ -57,7 +66,24 @@ class NinjaCard extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 30.0),
+            const SizedBox(height: 30.0),
+            Row(
+              children: [
+                Icon(
+                  Icons.email,
+                  color: Colors.grey[400],
+                ),
+                SizedBox(width: 10.0),
+                Text(
+                  'john@gmail.com',
+                  style: TextStyle(
+                    color: Colors.grey[400],
+                    fontSize: 18.0,
+                    letterSpacing: 1.0,
+                  ),
+                )
+              ],
+            )
           ],
         ),
       ),
